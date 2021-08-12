@@ -35,15 +35,17 @@ while chosen is not None:
         nick=input("choose username:")+"@"+server
         password = getpass.getpass("choose a password:")
         result = dav_chat.ClientHandler(nick,password)
+
     if chosen=='3':
         nick=input("account:")+"@"+server
         password = getpass.getpass("password:")
         dav_chat.delete_user(nick,password)
-    if chosen=='4':
+
+    if chosen=='9':
         quit()
     else:
         chosen = dav_chat.menu_us()
-
+		
 def menu_us():
     print("""-----------CHAT MENU----------""")
     print(""" 1. Show Available Users""")
